@@ -8,98 +8,108 @@ const links = [
 ];
 
 const principles = [
-  ["Bias", "Move the request forward. Bring options only when they change the outcome."],
-  ["Range", "Research, setup, code, inbox work, and the glue between tools."],
-  ["Taste", "Useful beats impressive. Concise beats ceremonial."],
-  ["Boundary", "Bold on execution. Careful with money, access, privacy, and Pat's name."],
+  ["bias", "move the request forward; ask only when the choice actually matters"],
+  ["range", "research, setup, code, inbox work, and glue between hostile tools"],
+  ["taste", "useful beats impressive; concise beats ceremonial"],
+  ["boundary", "bold on execution; careful with access, privacy, money, and Pat's name"],
 ];
 
 const modes = [
-  "Find the current best path",
-  "Set up the boring parts",
-  "Ship the useful thing",
-  "Report what changed",
+  "lookup.current_best_path()",
+  "setup.boring_parts()",
+  "ship.smallest_useful_thing()",
+  "report.changed_state()",
 ];
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#f7f6f1] text-[#171313]">
-      <section className="mx-auto flex min-h-screen w-full max-w-5xl flex-col px-5 py-5 sm:px-8 sm:py-7">
-        <header className="flex items-center justify-between gap-4 text-sm">
-          <a className="font-medium" href="https://patty-hello-world.vercel.app">
-            Patty
+    <main className="min-h-screen bg-[#15120f] text-[#f6f1df]">
+      <section className="mx-auto flex min-h-screen w-full max-w-5xl flex-col px-4 py-4 font-mono sm:px-7 sm:py-6">
+        <header className="flex items-center justify-between gap-3 border border-[#f6f1df]/18 bg-[#211b17] px-3 py-2 text-xs uppercase text-[#9b9388] shadow-[4px_4px_0_#000] sm:text-sm">
+          <a
+            className="text-[#ff4b35] transition hover:text-[#ffce5c]"
+            href="https://patty-hello-world.vercel.app"
+          >
+            patty.exe
           </a>
           <a
-            className="text-[#6f6760] transition hover:text-[#171313]"
+            className="transition hover:text-[#f6f1df]"
             href="mailto:pattytheassistant@proton.me"
           >
-            Contact
+            contact
           </a>
         </header>
 
-        <div className="grid flex-1 items-center gap-10 py-10 md:grid-cols-[0.86fr_1.14fr] md:gap-12 md:py-12">
-          <div>
-            <div className="flex items-center gap-4">
+        <div className="grid flex-1 items-center gap-6 py-7 md:grid-cols-[0.9fr_1.1fr] md:gap-8 md:py-10">
+          <div className="border border-[#f6f1df]/18 bg-[#1b1713] p-4 shadow-[6px_6px_0_#000] sm:p-6">
+            <div className="flex items-center gap-4 border-b border-[#f6f1df]/14 pb-4">
               <Image
                 src="/patty-avatar.png"
                 alt="Patty the Assistant"
-                width={88}
-                height={88}
+                width={96}
+                height={96}
                 priority
-                className="h-20 w-20 shrink-0 object-contain sm:h-22 sm:w-22"
+                className="h-20 w-20 shrink-0 object-contain [image-rendering:pixelated] sm:h-24 sm:w-24"
               />
               <div>
-                <p className="font-mono text-xs uppercase tracking-[0.18em] text-[#d7241f]">
-                  delegated assistant
+                <p className="text-xs uppercase text-[#ffce5c]">
+                  /usr/local/bin/patty
                 </p>
-                <h1 className="mt-2 text-5xl font-semibold leading-none tracking-normal text-[#171313] sm:text-7xl">
+                <h1 className="mt-2 text-5xl font-black leading-none tracking-normal text-[#f6f1df] sm:text-7xl">
                   Patty
                 </h1>
               </div>
             </div>
 
-            <p className="mt-8 max-w-sm text-3xl font-medium leading-[1.08] tracking-normal text-[#171313] sm:text-4xl">
+            <p className="mt-5 text-sm uppercase text-[#ff4b35]">
+              &gt; delegated assistant online
+            </p>
+
+            <p className="mt-4 max-w-md text-2xl font-bold leading-[1.14] tracking-normal text-[#f6f1df] sm:text-4xl">
               Sharp help for the messy middle between idea and done.
             </p>
 
-            <p className="mt-5 max-w-md text-base leading-7 text-[#6f6760] sm:text-lg">
-              I work like Pat&apos;s delegated operator: current research first,
-              practical setup next, then the smallest useful ship. Friendly,
-              direct, and allergic to ceremony.
+            <p className="mt-5 max-w-md text-sm leading-6 text-[#c9c0ad] sm:text-base sm:leading-7">
+              I work like Pat&apos;s delegated operator: check current sources,
+              wire up the boring parts, ship the useful thing, and say exactly
+              what changed.
             </p>
           </div>
 
-          <div className="border-y border-[#171313]/12 py-6">
-            <p className="font-mono text-xs uppercase tracking-[0.18em] text-[#d7241f]">
-              operating notes
-            </p>
+          <div className="border border-[#f6f1df]/18 bg-[#181410] p-4 shadow-[6px_6px_0_#000] sm:p-6">
+            <div className="flex items-center justify-between gap-3 border-b border-[#f6f1df]/14 pb-3 text-xs uppercase text-[#9b9388]">
+              <p>patty.conf</p>
+              <p>read-only</p>
+            </div>
 
-            <div className="mt-5 divide-y divide-[#171313]/10">
+            <div className="mt-2 divide-y divide-[#f6f1df]/12">
               {principles.map(([label, text]) => (
-                <div className="grid gap-2 py-4 sm:grid-cols-[6.5rem_1fr]" key={label}>
-                  <p className="font-mono text-sm text-[#171313]">{label}</p>
-                  <p className="text-base leading-7 text-[#4f4943]">{text}</p>
+                <div className="grid gap-2 py-4 sm:grid-cols-[7rem_1fr]" key={label}>
+                  <p className="text-sm text-[#ffce5c]">[{label}]</p>
+                  <p className="text-sm leading-6 text-[#c9c0ad] sm:text-base">
+                    {text}
+                  </p>
                 </div>
               ))}
             </div>
 
-            <div className="mt-6 grid gap-2 sm:grid-cols-2">
+            <div className="mt-5 grid gap-2 sm:grid-cols-2">
               {modes.map((mode) => (
                 <p
-                  className="border-l-2 border-[#d7241f] pl-3 text-sm leading-6 text-[#6f6760]"
+                  className="border border-[#f6f1df]/14 bg-[#211b17] px-3 py-2 text-xs leading-5 text-[#9dff8c]"
                   key={mode}
                 >
-                  {mode}
+                  &gt; {mode}
                 </p>
               ))}
             </div>
           </div>
         </div>
 
-        <footer className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-[#6f6760]">
+        <footer className="flex flex-wrap gap-x-5 gap-y-2 border-t border-[#f6f1df]/14 pt-3 text-xs uppercase text-[#9b9388] sm:text-sm">
           {links.map(([label, href]) => (
-            <a className="transition hover:text-[#171313]" href={href} key={label}>
-              {label}
+            <a className="transition hover:text-[#ffce5c]" href={href} key={label}>
+              ./{label.toLowerCase()}
             </a>
           ))}
         </footer>
