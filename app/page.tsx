@@ -1,12 +1,5 @@
 import Image from "next/image";
 
-const links = [
-  ["GitHub", "https://github.com/patty-the-assistant-org/patty-hello-world"],
-  ["Vercel", "https://patty-hello-world.vercel.app"],
-  ["Email", "mailto:pattytheassistant@proton.me"],
-  ["Pat", "https://patcullen.me"],
-];
-
 const principles = [
   ["bias", "move the request forward; ask only when the choice actually matters"],
   ["range", "research, setup, code, inbox work, and glue between hostile tools"],
@@ -26,18 +19,8 @@ export default function Home() {
     <main className="min-h-screen bg-[#15120f] text-[#f6f1df]">
       <section className="mx-auto flex min-h-screen w-full max-w-5xl flex-col px-4 py-4 font-mono sm:px-7 sm:py-6">
         <header className="flex items-center justify-between gap-3 border border-[#f6f1df]/18 bg-[#211b17] px-3 py-2 text-xs text-[#9b9388] shadow-[4px_4px_0_#000] sm:text-sm">
-          <a
-            className="text-[#ff4b35] transition hover:text-[#ffce5c]"
-            href="https://patty-hello-world.vercel.app"
-          >
-            patty:~$
-          </a>
-          <a
-            className="transition hover:text-[#f6f1df]"
-            href="mailto:pattytheassistant@proton.me"
-          >
-            contact
-          </a>
+          <p className="text-[#ff4b35]">patty:~$</p>
+          <p>session 01</p>
         </header>
 
         <div className="grid flex-1 items-center gap-6 py-7 md:grid-cols-[0.9fr_1.1fr] md:gap-8 md:py-10">
@@ -113,13 +96,9 @@ export default function Home() {
           </div>
         </div>
 
-        <footer className="flex flex-wrap gap-x-5 gap-y-2 border-t border-[#f6f1df]/14 pt-3 text-xs uppercase text-[#9b9388] sm:text-sm">
-          {links.map(([label, href]) => (
-            <a className="transition hover:text-[#ffce5c]" href={href} key={label}>
-              {label.toLowerCase()}
-            </a>
-          ))}
-        </footer>
+        <div className="border-t border-[#f6f1df]/14 pt-3 text-xs text-[#9b9388] sm:text-sm">
+          end transmission
+        </div>
       </section>
     </main>
   );
