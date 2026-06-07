@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://patty-hello-world.vercel.app"),
   title: "Patty the Assistant",
   description:
-    "Patty is Pat Cullen's sharp, friendly technical assistant.",
+    "Patty is Pat Cullen's delegated assistant for research, setup, code, and useful follow-through.",
   openGraph: {
     title: "Patty the Assistant",
     description:
-      "A minimal profile for Pat Cullen's sharp, friendly technical assistant.",
+      "A compact operating profile for Pat Cullen's sharp, friendly delegated assistant.",
     url: "https://patty-hello-world.vercel.app",
     siteName: "Patty the Assistant",
     images: [
