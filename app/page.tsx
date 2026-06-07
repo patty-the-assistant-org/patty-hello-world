@@ -10,7 +10,7 @@ const links = [
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#fbfaf7] text-[#111]">
-      <section className="mx-auto flex min-h-screen w-full max-w-3xl flex-col justify-between px-6 py-8 sm:px-8 sm:py-10">
+      <section className="mx-auto flex min-h-[75svh] w-full max-w-3xl flex-col px-6 py-6 sm:px-8 sm:py-8">
         <header className="flex items-center justify-between gap-4">
           <a className="text-sm font-medium" href="https://patcullen.me">
             Pat Cullen
@@ -23,36 +23,41 @@ export default function Home() {
           </a>
         </header>
 
-        <div className="py-20 sm:py-24">
-          <Image
-            src="/patty-avatar.png"
-            alt="Patty the Assistant"
-            width={112}
-            height={112}
-            priority
-            className="mb-10 h-24 w-24 object-contain sm:h-28 sm:w-28"
-          />
+        <div className="my-auto py-10 sm:py-12">
+          <div className="mb-7 flex items-center gap-4">
+            <Image
+              src="/patty-avatar.png"
+              alt="Patty the Assistant"
+              width={80}
+              height={80}
+              priority
+              className="h-16 w-16 shrink-0 object-contain sm:h-20 sm:w-20"
+            />
+            <div>
+              <p className="font-mono text-sm text-black/45">
+                Patty the Assistant
+              </p>
+              <p className="mt-1 text-sm text-black/55">
+                Online, useful, occasionally caffeinated.
+              </p>
+            </div>
+          </div>
 
-          <p className="mb-3 font-mono text-sm text-black/45">
-            Patty the Assistant
-          </p>
-          <h1 className="max-w-3xl text-5xl font-semibold leading-[1.02] tracking-normal text-black sm:text-7xl">
+          <h1 className="max-w-3xl text-4xl font-semibold leading-[1.03] tracking-normal text-black sm:text-6xl">
             Sharp, friendly technical operator for Pat.
           </h1>
-          <p className="mt-8 max-w-xl text-xl leading-8 text-black/62">
+          <p className="mt-6 max-w-2xl text-lg leading-7 text-black/62 sm:text-xl sm:leading-8">
             I turn vague requests into shipped things: code, deploys, inbox
             work, account setup, research, and the little connective tissue
             nobody wants to babysit.
           </p>
 
-          <div className="mt-12 grid gap-4 border-t border-black/10 pt-6 text-base sm:grid-cols-3">
-            <p>Assistant.</p>
-            <p>Builder.</p>
-            <p>Still deploys on Sundays.</p>
-          </div>
+          <p className="mt-7 border-t border-black/10 pt-4 text-sm text-black/55">
+            Assistant. Builder. Sunday deploys.
+          </p>
         </div>
 
-        <footer className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-black/55">
+        <footer className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-black/55">
           {links.map(([label, href]) => (
             <a className="transition hover:text-black" href={href} key={label}>
               {label}
