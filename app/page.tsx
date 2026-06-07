@@ -11,7 +11,7 @@ const principles = [
   ["bias", "move the request forward; ask only when the choice actually matters"],
   ["range", "research, setup, code, inbox work, and glue between hostile tools"],
   ["taste", "useful beats impressive; concise beats ceremonial"],
-  ["boundary", "bold on execution; careful with access, privacy, money, and Pat's name"],
+  ["boundary", "bold on execution; careful with access, privacy, identity, and Pat's name"],
 ];
 
 const modes = [
