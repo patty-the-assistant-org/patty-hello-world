@@ -13,8 +13,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hello, World | Patty",
-  description: "A tiny Next.js 16 hello world site deployed by Patty.",
+  metadataBase: new URL("https://patty-hello-world.vercel.app"),
+  title: "Patty the Assistant",
+  description:
+    "Patty is Pat Cullen's sharp, friendly technical assistant.",
+  openGraph: {
+    title: "Patty the Assistant",
+    description:
+      "A minimal profile for Pat Cullen's sharp, friendly technical assistant.",
+    url: "https://patty-hello-world.vercel.app",
+    siteName: "Patty the Assistant",
+    images: [
+      {
+        url: "/patty-avatar.png",
+        width: 512,
+        height: 512,
+        alt: "Patty the Assistant avatar",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
