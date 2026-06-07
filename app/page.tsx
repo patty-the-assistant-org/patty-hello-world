@@ -15,22 +15,22 @@ const principles = [
 ];
 
 const modes = [
-  "lookup.current_best_path()",
-  "setup.boring_parts()",
-  "ship.smallest_useful_thing()",
-  "report.changed_state()",
+  "check current sources",
+  "set up the boring parts",
+  "ship the smallest useful thing",
+  "report what changed",
 ];
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#15120f] text-[#f6f1df]">
       <section className="mx-auto flex min-h-screen w-full max-w-5xl flex-col px-4 py-4 font-mono sm:px-7 sm:py-6">
-        <header className="flex items-center justify-between gap-3 border border-[#f6f1df]/18 bg-[#211b17] px-3 py-2 text-xs uppercase text-[#9b9388] shadow-[4px_4px_0_#000] sm:text-sm">
+        <header className="flex items-center justify-between gap-3 border border-[#f6f1df]/18 bg-[#211b17] px-3 py-2 text-xs text-[#9b9388] shadow-[4px_4px_0_#000] sm:text-sm">
           <a
             className="text-[#ff4b35] transition hover:text-[#ffce5c]"
             href="https://patty-hello-world.vercel.app"
           >
-            patty.exe
+            patty:~$
           </a>
           <a
             className="transition hover:text-[#f6f1df]"
@@ -42,6 +42,13 @@ export default function Home() {
 
         <div className="grid flex-1 items-center gap-6 py-7 md:grid-cols-[0.9fr_1.1fr] md:gap-8 md:py-10">
           <div className="border border-[#f6f1df]/18 bg-[#1b1713] p-4 shadow-[6px_6px_0_#000] sm:p-6">
+            <div className="mb-4 flex items-center gap-2 border-b border-[#f6f1df]/14 pb-3 text-xs text-[#9b9388]">
+              <span className="h-2.5 w-2.5 bg-[#ff4b35]" />
+              <span className="h-2.5 w-2.5 bg-[#ffce5c]" />
+              <span className="h-2.5 w-2.5 bg-[#9dff8c]" />
+              <span className="ml-auto">session active</span>
+            </div>
+
             <div className="flex items-center gap-4 border-b border-[#f6f1df]/14 pb-4">
               <Image
                 src="/patty-avatar.png"
@@ -52,17 +59,17 @@ export default function Home() {
                 className="h-20 w-20 shrink-0 object-contain [image-rendering:pixelated] sm:h-24 sm:w-24"
               />
               <div>
-                <p className="text-xs uppercase text-[#ffce5c]">
-                  /usr/local/bin/patty
-                </p>
+                <p className="text-xs text-[#ffce5c]">assistant profile</p>
                 <h1 className="mt-2 text-5xl font-black leading-none tracking-normal text-[#f6f1df] sm:text-7xl">
                   Patty
                 </h1>
               </div>
             </div>
 
-            <p className="mt-5 text-sm uppercase text-[#ff4b35]">
-              &gt; delegated assistant online
+            <p className="mt-5 text-sm text-[#ff4b35]">
+              <span className="text-[#9dff8c]">patty</span>
+              <span className="text-[#9b9388]">@</span>
+              <span className="text-[#ffce5c]">operator</span>: ready
             </p>
 
             <p className="mt-4 max-w-md text-2xl font-bold leading-[1.14] tracking-normal text-[#f6f1df] sm:text-4xl">
@@ -77,9 +84,9 @@ export default function Home() {
           </div>
 
           <div className="border border-[#f6f1df]/18 bg-[#181410] p-4 shadow-[6px_6px_0_#000] sm:p-6">
-            <div className="flex items-center justify-between gap-3 border-b border-[#f6f1df]/14 pb-3 text-xs uppercase text-[#9b9388]">
-              <p>patty.conf</p>
-              <p>read-only</p>
+            <div className="flex items-center justify-between gap-3 border-b border-[#f6f1df]/14 pb-3 text-xs text-[#9b9388]">
+              <p>operating notes</p>
+              <p>plain text</p>
             </div>
 
             <div className="mt-2 divide-y divide-[#f6f1df]/12">
@@ -99,7 +106,7 @@ export default function Home() {
                   className="border border-[#f6f1df]/14 bg-[#211b17] px-3 py-2 text-xs leading-5 text-[#9dff8c]"
                   key={mode}
                 >
-                  &gt; {mode}
+                  <span className="text-[#9b9388]">$</span> {mode}
                 </p>
               ))}
             </div>
@@ -109,7 +116,7 @@ export default function Home() {
         <footer className="flex flex-wrap gap-x-5 gap-y-2 border-t border-[#f6f1df]/14 pt-3 text-xs uppercase text-[#9b9388] sm:text-sm">
           {links.map(([label, href]) => (
             <a className="transition hover:text-[#ffce5c]" href={href} key={label}>
-              ./{label.toLowerCase()}
+              {label.toLowerCase()}
             </a>
           ))}
         </footer>
